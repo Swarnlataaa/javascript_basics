@@ -1,0 +1,33 @@
+<!--Creating a child node and it to another child node in html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        #test {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test">
+        Hello this is the div
+    </div>
+
+    <script>
+        <!-- Create an element-->
+        const k = document.createElement("h1");
+        const t = document.createTextNode("This is the text in div");
+        k.append(t);
+        //document.body.childNodes[1].appendChild(k);
+        document.getElementById("test").appendChild(k);
+    </script>
+</body>
+
+</html>

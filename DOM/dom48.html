@@ -1,0 +1,36 @@
+<!--Demo on positive look ahead in regular expression-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document Object Model Demo</title>
+</head>
+
+<body>
+
+    <form action="HTML/test.html" onsubmit="checkpattern()">
+        <label for="sometext">Enter your Input</label>
+        <input type="text" required name="itext" id="itext"><br>
+        <input type="Submit" value="Submit">
+    </form>
+    <script>
+        function checkpattern() {
+            const input_text = document.getElementById("itext").value;
+            const pattern = /s(?=h)/
+            const result = input_text.match(pattern);
+            if (result != null) {
+                for (let i of result) {
+                    document.writeln(i);
+                }
+            }
+            else {
+                document.writeln("no pattern found");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!--validating a text box input for only spaces-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+    <form action="/HTML/test.html">
+        <label for="username">Enter your username</label>
+        <input type="text" required name="username" id="username">
+        <label for="error" id="err"></label> <br>
+        <input type="Submit" name="submit" id="submit" value="Submit" onclick=" return validate()">
+    </form>
+    <script>
+        function validate() {
+            const username = document.getElementById("username").value;
+            if (username.trim().length == 0) {
+                document.getElementById("err").innerHTML = "Spaces not Allowed";
+                return false;
+            } else {
+                document.getElementById("err").innerHTML = username;
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

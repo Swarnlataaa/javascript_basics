@@ -1,0 +1,62 @@
+DOM Introduction 
+    why 
+    documentElement
+    document.head
+    document.body
+    childnodes 
+    nodename
+    nodetype 
+    nodevalue
+    
+    Value	Constants
+    1	Node.ELEMENT_NODE
+    9	Node.DOCUMENT_NODE
+    3	Node.TEXT_NODE
+    8	Node.COMMENT_NODE
+    
+    
+    
+    Property	Description
+    Node.nodeName	Returns name of the current node as a string. For a text node, it will return "#text".
+    Node.nodeValue	Returns or sets the value of the current node. For text node and comment node, it will return the content. For document and element node it will return null.
+    Node.childNodes	Returns a live NodeList of child nodes of the given element. Particular Children can be selected by specifying an index that starts at '0' for the first element. Nodelist is a collection of nodes and "live" here means that NodeList will reflect any changes in DOM instantly.
+    Occurrence Indicators (or Repetition Operators):
+    
+        +: one or more (1+), e.g., [0-9]+ matches one or more digits such as '123', '000'.
+        *: zero or more (0+), e.g., [0-9]* matches zero or more digits. It accepts all those in [0-9]+ plus the empty string.
+        ?: zero or one (optional), e.g., [+-]? matches an optional "+", "-", or an empty string.
+        {m,n}: m to n (both inclusive)
+        {m}: exactly m times
+        {m,}: m or more (m+)
+
+
+        Position Anchors: does not match character, but position such as start-of-line, end-of-line, start-of-word and end-of-word.
+    
+        ^, $: start-of-line and end-of-line respectively. E.g., ^[0-9]$ matches a numeric string.
+        \b: boundary of word, i.e., start-of-word or end-of-word. E.g., \bcat\b matches the word "cat" in the input string.
+        \B: Inverse of \b, i.e., non-start-of-word or non-end-of-word.
+        \<, \>: start-of-word and end-of-word respectively, similar to \b. E.g., \<cat\> matches the word "cat" in the input string.
+        \A, \Z: start-of-input and end-of-input respectively.
+    
+    
+    
+    Metacharacters and Metacharacter classes 
+    
+    metacharacters consist of only single characters and ofcourse they have special meaning and they can not be used as a literal character alone and most of them raise a pattern error when they are used alone. 
+    Even if they don't raise an error they will produce unexpected results. Here are twelve basic metacharacters.
+    
+    \
+    ^
+    |
+    .
+    $
+    ?
+    *
+    +
+    (
+    )
+    [
+    {
+    
+    
+    

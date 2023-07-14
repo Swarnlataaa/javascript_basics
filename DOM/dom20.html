@@ -1,0 +1,34 @@
+<!--Creating many text boxes using Javascript-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+
+    <label for="username">Enter your username</label>
+    <input type="text" required name="username" id="username">
+    <input type="button" name="addbox" id="addox" value="add" onclick="add()">
+    <script>
+        function add() {
+            const new_label = document.createElement("label");
+            new_label.textContent = "Enter your username";
+            const new_textbox = document.createElement("input");
+            new_textbox.setAttribute("type", "text");
+            const bre = document.createElement("br");
+            const bre1 = document.createElement("br");
+            document.body.appendChild(bre);
+            document.body.appendChild(bre1);
+            document.body.appendChild(new_label);
+            document.body.appendChild(new_textbox);
+
+        }
+    </script>
+</body>
+
+</html>

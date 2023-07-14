@@ -1,0 +1,43 @@
+validating checkbox using javascript
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Option Validation and Input Demo</title>
+</head>
+
+<body>
+    <form action="profile.php" method="post" onsubmit="return validate();">
+        <label for="subjects">Select your subjects</label><br>
+        <input type="checkbox" class="checkbox" name="sub[]" value="chemistry">Chemistry<br>
+        <input type="checkbox" class="checkbox" name="sub[]" value="physics">Physics<br>
+        <input type="checkbox" class="checkbox" name="sub[]" value="English">English<br>
+        <br>
+        <input type="submit" value="Submit" name="submit">
+        <label for="msg" id="msg"></label>
+
+        <script>
+            function validate() {
+                let subjects = document.getElementsByClassName("checkbox");
+                let found = false;
+                for (let i of subjects) {
+                    if (i.checked) {
+                        document.getElementById("msg").innerHTML += i.value;
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    document.getElementById("msg").innerHTML = "Select your Subjects";
+                    return false;
+                }
+                return false;
+            }          
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!--vellore landline phone number validation (0416-22XXXXX)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+
+    <form action="HTML/test.html" onsubmit="validate()">
+        <label for="phone">Enter your Phone Number</label>
+        <input type="text" required name="phone" id="phone">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validate() {
+            const phone_number = document.getElementById("phone").value;
+            let pattern = /0416-22[0-9]{5}$/i
+            const result = phone_number.match(pattern);
+            document.write(result);
+        }
+    </script>
+</body>
+
+</html>

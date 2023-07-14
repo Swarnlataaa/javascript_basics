@@ -1,0 +1,47 @@
+<!--Changing the color of the text on scroll of a div 
+    -->
+    <!--events in javascript-->
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutorial</title>
+        <style>
+            div {
+                height: 500px;
+                width: 300px;
+                overflow: scroll;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="test" onscroll="changecolor()">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit excepturi harum veritatis facere amet dolorum
+            sit laborum eius laboriosam, reprehenderit ea rerum recusandae obcaecati quaerat dignissimos, doloremque eos ut!
+            Sed.lorem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure dignissimos amet labore unde accusamus
+            sunt reprehenderit, praesentium facilis asperiores, ipsam sed maiores. Id veniam molestiae enim accusamus quia
+            tempora!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tenetur praesentium porro perferendis impedit
+            quisquam temporibus alias quidem blanditiis consequuntur voluptatum nulla et quis earum tempore, accusamus
+            laborum eaque eligendi!lorem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi alias esse magnam, vitae iure ad, in pariatur
+            dolores aliquam id optio? Odio placeat harum quos sint ratione eius tempora similique?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, amet, quibusdam assumenda accusantium
+            saepe sapiente voluptatibus aliquam ullam, omnis voluptate vitae vel expedita ea ut dolor dolorum aut
+            repellendus quam!
+        </div>
+    
+    
+        <script>
+            function changecolor() {
+                document.getElementById("test").style.color = "red";
+            }
+        </script>
+    </body>
+    
+    </html>

@@ -1,0 +1,36 @@
+Validating select using javascript
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Validation and Input Demo</title>
+</head>
+
+<body>
+    <form action="profile.php" method="post" onsubmit="return validate();">
+        <label for="country">Select your country</label><br>
+        <select name="country" id="country" required>
+            <option disabled selected value> -- select an option -- </option>
+            <option value="US">United States</option>
+            <option value="India">India</option>
+            <option value="Germany">Germany</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit" name="submit">
+        <label for="msg" id="msg"></label>
+
+        <script>
+            function validate() {
+                let country = document.getElementById("country").value;
+                document.getElementById("msg").innerHTML = country;
+                return false;
+            }          
+        </script>
+    </form>
+</body>
+
+</html>

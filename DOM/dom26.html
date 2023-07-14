@@ -1,0 +1,37 @@
+<!--simple form validation -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+    <form>
+        <label for="username">Enter your username</label>
+        <input type="text" required name="username" id="username"><br>
+        <label for="password">Enter your password</label>
+        <input type="password" required name="password" id="password"><br>
+        <label for="cpass">Retype your password</label>
+        <input type="password" required name="cpass" id="cpass">
+        <input type="submit" name="submit" value="Submit" onclick="validate()">
+    </form>
+    <script>
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("cpass").value;
+            if (password.length < 5) {
+                document.writeln("password of not good length");
+            }
+            if (password.localeCompare(confirm_password) != 0) {
+                document.writeln("passwords dont match");
+            }
+        }
+    </script>
+</body>
+
+</html>

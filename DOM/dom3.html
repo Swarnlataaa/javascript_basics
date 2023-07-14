@@ -1,0 +1,32 @@
+<!--browse through all the child nodes under body display the nodename.change the text content for certain nodes. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+    This is some text
+    <a href="test.css">Click Here</a>
+    <p>This is a paragraph</p>
+    <h1>This is a h1</h1>
+    <h2>This is head3</h2>
+    <div>
+        hello how are you
+    </div>
+    <script>
+        //printing all the childnodes in body of a document 
+        const x = document.body.childNodes;
+        for (let i of x) {
+            document.writeln(i.nodeName)
+        }
+        document.body.childNodes[1].textContent = "Lets change it";
+        document.body.childNodes[10].textContent = "this is the div that is changing";
+    </script>
+</body>
+
+</html>

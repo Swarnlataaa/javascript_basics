@@ -1,0 +1,28 @@
+const k =[1,2,3,4,5,6]
+k.pop()
+console.log(k);
+//split() 
+    let x = 'Swarna is teaching javascript'
+    const k = x.split(" ");
+    for(let i of k)
+    {
+        console.log(i);
+    }
+    
+    
+    substring()
+    let x ="Swarna"
+    console.log(x.substring(0,2));
+    //output is Sa (end is not included)
+    
+    //tolowercase ,touppercase 
+    let x ="Swarna"
+    console.log(x.toLowerCase());
+    
+    let x ="Swarna"
+    console.log(x.toUpperCase());
+    
+    let x =" Swarna "
+    console.log(x.trim());
+    //variations are trimStart() and trimEnd()
+    

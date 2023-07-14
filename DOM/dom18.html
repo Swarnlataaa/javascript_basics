@@ -1,0 +1,44 @@
+<!--Removing many elements from within a parent-->
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutorial</title>
+    </head>
+    
+    <body>
+    
+        <div id="test">
+            This is some text inside the div
+            <p>this is sentence1</p>
+            <p>this is sentence2</p>
+            <p>this is sentence3</p>
+            <p>this is sentence4</p>
+            <p>this is sentence5</p>
+            <p>this is sentence6</p>
+            <p>this is sentence7</p>
+            <p>this is sentence8</p>
+        </div>
+        <p>I am still there</p>
+    
+        <script>
+         //delete all elements of type paragraph from within div 
+          const k=document.getElementById("test");
+          if(k.hasChildNodes)
+          {
+            const ch = k.childNodes;
+            for(let i of ch)
+            {
+              if(i.nodeName.localeCompare('P')==0)
+              {
+                i.remove();
+              }
+            }
+          }
+        </script>
+    </body>
+    
+    </html>

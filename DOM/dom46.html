@@ -1,0 +1,39 @@
+<!--Metacharacter Classes
+\d matches any decimal digit 0-9
+\D matches any character thats not a decimal digit
+\w matches any word character A-Z a-z 0-9
+\W matches any non word character
+\s matches a white space
+\S matches any thing thats not a white space
+
+demo-->
+<!--matching using meta character classes format \d\d\d\D\D\s\w$-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+
+    <form action="HTML/test.html" onsubmit="validate()">
+        <label for="username">Enter your username</label>
+        <input type="text" required name="username" id="username">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validate() {
+            const username = document.getElementById("username").value;
+            let pattern = /\d\d\d\D\D\s\w$/
+            const result = username.match(pattern);
+            document.write(result);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!--getelementsbyName-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document Object Model Demo</title>
+</head>
+
+<body>
+
+    <div id="d1" name="mydiv"></div>
+    <div id="d2" name="mydiv"></div>
+    <div id="d3" name="mydiv"></div>
+    <div id="d4" name="mydiv"></div>
+
+    <script>
+        const k = document.getElementsByName("mydiv");
+        for (let i in k) {
+            k[i].innerHTML = "hello this is working fine";
+            k[i].style.color = "red";
+        }
+    </script>
+</body>
+
+</html>

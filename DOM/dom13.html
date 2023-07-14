@@ -1,0 +1,23 @@
+<!--Creating a child node and adding it to HTML Body-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+
+    <script>
+        <!-- Create an element-->
+        const k = document.createElement("h1");
+        const t = document.createTextNode("This is the text in h1");
+        k.append(t);
+        document.body.appendChild(k);
+    </script>
+</body>
+
+</html>

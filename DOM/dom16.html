@@ -1,0 +1,30 @@
+<!--Removing a Node from the HTML Body-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        #test {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="test">
+        Hello this is the div
+    </div>
+    <p>I am still there</p>
+
+    <script>
+        //delete an element 
+        document.body.childNodes[1].remove();
+    </script>
+</body>
+
+</html>

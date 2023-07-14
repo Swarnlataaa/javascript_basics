@@ -1,0 +1,34 @@
+<!--getting date as input from html form-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form handling using JavaScript</title>
+</head>
+
+<body>
+    <form action="exercise.html" method="post" onsubmit="return validate();">
+        <label for="subjects">Select your Join Date</label> <br>
+        <input type="date" name="joindate" id="joindate">
+        <input type="submit" name="submit" value="Submit">
+        <label for="msg" id="msg"></label>
+
+        <script>
+            function validate() {
+                const joindate = document.getElementById("joindate").value;
+                const d = new Date(joindate);
+                document.write(d.getFullYear());
+                document.write(d.getDate());
+                return true;
+            }
+        </script>
+
+
+    </form>
+</body>
+
+</html>

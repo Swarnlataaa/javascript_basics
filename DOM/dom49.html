@@ -1,0 +1,39 @@
+Password validation -
+atleast one capital letter
+atleast one lower case letter
+atleast one digit
+atleast one special character
+minimum eight characters in length
+<!--Password validation using regular expression -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document Object Model Demo</title>
+</head>
+
+<body>
+
+    <form action="#" onsubmit="checkpattern()">
+        <label for="sometext">Enter your Input</label>
+        <input type="text" required name="itext" id="itext"><br>
+        <input type="Submit" value="Submit">
+    </form>
+    <script>
+        function checkpattern() {
+            const input_text = document.getElementById("itext").value;
+            const pattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}/
+            if (input_text.match(pattern)) {
+                document.write("password is valid");
+            }
+            else {
+                document.write("Password is not valid");
+            }
+        }
+    </script>
+</body>
+
+</html>

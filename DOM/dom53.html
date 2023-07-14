@@ -1,0 +1,30 @@
+<!--Getting the range input in javascript-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Validation and Input Demo</title>
+</head>
+
+<body>
+    <form action="profile.php" method="post" onsubmit="return validate();">
+        <label for="recommendation">Select your Recommendation for Communication Skills</label><br>
+        <input type="range" min="1" max="12" value="1" step="1" name="communication" id="communication">
+        <br>
+        <input type="submit" value="Submit" name="submit">
+        <label for="msg" id="msg"></label>
+
+        <script>
+            function validate() {
+                let skill_level = document.getElementById("communication").value;
+                document.getElementById("msg").innerHTML = skill_level;
+                return false; //intentionally returning false here. 
+            }          
+        </script>
+    </form>
+</body>
+
+</html>

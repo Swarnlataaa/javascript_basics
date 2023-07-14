@@ -1,0 +1,28 @@
+<!--Replacing a paragraph with a heading-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+</head>
+
+<body>
+
+    <div id="test">
+        <p id="e">I am already there</p>
+    </div>
+
+    <script>
+        const new_element = document.createElement("h1");
+        const element_text = document.createTextNode("This is a Heading");
+        new_element.append(element_text);
+        const par = document.getElementById("test");
+        const existing_element = document.getElementById("e");
+        par.replaceChild(new_element, existing_element);
+    </script>
+</body>
+
+</html>
